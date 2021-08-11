@@ -172,6 +172,34 @@ None
 42.0
 
 
+# OOP - Inheritance
+# Simulation OOP
+class Toy:
+    def talk(self):
+        raise NotImplementedError('This method should have implemented.')
+
+class Dog(Toy):
+    # Write your code here
+    def talk(self):
+        print("Wow")
+
+class Cat(Toy):
+    # Write your code here
+    def talk(self):
+        print("Meow")
+
+class ToyFactory:
+    # @param {string} Type a string
+    # @return {Toy} Get object of the type
+    def getToy(self, type):
+        # Write your code here
+        if type == 'Dog':
+            return Dog()
+        elif type == 'Cat':
+            return Cat()
+        else:
+            return None
+
 
 # References:
 https://www.pythoncheatsheet.org/
