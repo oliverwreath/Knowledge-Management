@@ -1,7 +1,12 @@
-// 格式：分两部分，首先是好用的操作，接着是Algo算法模板（含前缀树等DS）。
-// Arrays
+# Java Cheat-Sheet.md
+###### 格式：分两部分，首先是好用的操作，接着是Algo算法模板（含前缀树等DS）。
+## Part 1: 常见数据结构
+### Arrays
+```java
 Arrays.sort(A);
-// List
+```
+### List
+```java
 List<Integer> list = new LinkedList<>();
 Collections.sort(list, new MyComparator())
 private MyComparator implements Comparator<Integer> {
@@ -10,12 +15,42 @@ private MyComparator implements Comparator<Integer> {
     return o1 - o2; // myStr1.compareTo(myStr2)
   }
 }
-// PriorityQueue
+```
+### HashMap
+```java
+ConcurrentMap<String, String> map = new ConcurrentHashMap<>();
+map.put("foo", "bar");
+map.put("han", "solo");
+map.put("r2", "d2");
+map.put("c3", "p0");
+
+        map.forEach((key, value) -> System.out.printf("%s = %s\n", key, value));
+
+
+        String value = map.putIfAbsent("c3", "p1");
+        System.out.println(value);    // p0
+
+        String value = map.getOrDefault("hi", "there");
+        System.out.println(value);    // there
+
+        map.replaceAll((key, value) -> "r2".equals(key) ? "d3" : value);
+        System.out.println(map.get("r2"));    // d3
+
+        map.compute("foo", (key, value) -> value + value);
+        System.out.println(map.get("foo"));   // barbar
+
+        map.merge("foo", "boo", (oldVal, newVal) -> newVal + " was " + oldVal);
+        System.out.println(map.get("foo"));   // boo was foo
+```
+### PriorityQueue
+```java
 PriorityQueue<> pq = new PriorityQueue<>(new MyComparator());
+```
+---
 
-===============================================================
-
-// Java - 前缀和模板
+## Part 2: Java 模板，活学活用
+### Java - 前缀和模板
+```java
 // prefixSum[i] = 前i个数字之和
 // int[] prefixSum = getPrefixSum(A);
 private int[] getPrefixSum(int[] A) {
@@ -27,8 +62,10 @@ private int[] getPrefixSum(int[] A) {
 
   return p;
 }
+```
 
-// Java - 同向双指针模板
+### Java - 同向双指针模板
+```java
 // int n = xxx.length;
 // int sum = 0;
 for (int i = 0, j = 0; i < n; i++) {
@@ -43,8 +80,10 @@ for (int i = 0, j = 0; i < n; i++) {
 
   // TODO: 去掉i，为下一步准备
 }
+```
 
-// Java - 普通BFS模版
+### Java - 普通BFS模板
+```java
 // 定义数据结构
 Queue<Integer> queue = new LinkedList<>();
 HashSet<Integer> visited = new HashSet<>();
@@ -65,8 +104,10 @@ while (!queue.isEmpty()) {
   }
 }
 // PS: 这里要注意，必须在点入队时进行更新，否则会导致相同点的重复入队。考虑(0,0)，每次只能往下和往右走，(1,1)会入队两次。
+```
 
-// DFS 模板
+### DFS 模板
+```java
 private void dfs() {  // 要点1： 常用visited数组来记录进度。
   if (到达最后一站（例如遍历到最后一个城市，或者树的DFS到了叶子节点）) {
     // 根据题意记录答案
@@ -86,8 +127,11 @@ private void dfs() {  // 要点1： 常用visited数组来记录进度。
   }
   return; //一般不需要返回值，除了分治等少数情况。
 }
-
-// ADS - 高级数据结构
+```
+---
+## Part 3: ADS - 高级数据结构
+### Trie前缀树/ 字典树
+```java
 // Approach #1 - Trie - Data Structure implementation.
 // T O(h) for all the 3 searching functions, given that h is the height of the tree.
 public class Trie {
@@ -167,7 +211,12 @@ public class Trie {
     }
   }
 }
+```
+---
+### References:
+- [JDK 8 API Specification](https://docs.oracle.com/javase/8/docs/api/index.html)
+- [JDK 11 API Specification](https://docs.oracle.com/en/java/javase/11/docs/api/index.html)
+- [Java 8 Concurrency Tutorial: Atomic Variables and ConcurrentMap](https://winterbe.com/posts/2015/05/22/java8-concurrency-tutorial-atomic-concurrent-map-examples/)
 
-// References:
-https://docs.oracle.com/javase/8/docs/api/index.html
-https://docs.oracle.com/en/java/javase/11/docs/api/index.html
+
+
