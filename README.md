@@ -20,3 +20,4 @@
     - [AWS Architecture Blog](https://aws.amazon.com/cn/blogs/architecture/)
     - [All Things Distributed AWS CTO's Blog](https://www.allthingsdistributed.com/)
 - 常见BQ“潜台词” 
+- [Markdown Cheat-Sheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
