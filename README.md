@@ -5,6 +5,18 @@
   - 模板死记，切记是为了活用。
   - Java Cheat-Sheet.java 
   - Python Cheat-Sheet.py 
-- 16大常见系统设计 
+- 16大常见系统设计
   - [必看SDP](https://github.com/donnemartin/system-design-primer)
+  - 延伸阅读Big Tech Blogs
+    - [The Airbnb Tech Blog](https://medium.com/airbnb-engineering)
+    - [Uber Engineering](https://eng.uber.com/)
+    - [Netflix Tech Blog](http://techblog.netflix.com/)
+    - [Dropbox Tech Blog](https://tech.dropbox.com/)
+    - [Twitter Engineering](https://blog.twitter.com/engineering)
+    - [Facebook Tech Blog](https://code.facebook.com/posts/)
+    - [LinkedIn Engineering Blog](https://engineering.linkedin.com/blog)
+    - [Google Developers](http://googledevelopers.blogspot.co.uk/)
+    - [Mozilla Tech Blog](https://hacks.mozilla.org/)
+    - [AWS Architecture Blog](https://aws.amazon.com/cn/blogs/architecture/)
+    - [All Things Distributed AWS CTO's Blog](https://www.allthingsdistributed.com/)
 - 常见BQ“潜台词” 
