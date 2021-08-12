@@ -7,6 +7,7 @@
 >>>   print('Jimmy Five Times ({})'.format(str(i)))
 ```
 ### Using for Loops with Lists
+```python
 >>> supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
 >>> for i, supply in enumerate(supplies):
 >>>     print('Index {} in supplies is: {}'.format(str(i), supply))
@@ -14,7 +15,9 @@ Index 0 in supplies is: pens
 Index 1 in supplies is: staplers
 Index 2 in supplies is: flame-throwers
 Index 3 in supplies is: binders
+```
 ### Looping Through Multiple Lists with zip()
+```python
 >>> name = ['Pete', 'John', 'Elizabeth']
 >>> age = [6, 23, 44]
 >>> for n, a in zip(name, age):
@@ -22,10 +25,11 @@ Index 3 in supplies is: binders
 Pete is 6 years old
 John is 23 years old
 Elizabeth is 44 years old
-
-===============================================================
+```
+---
 
 ### Range for-loop
+```python
 >>> for i in range(5):
 >>>   print('Jimmy Five Times ({})'.format(str(i)))
 Jimmy Five Times (0)
@@ -50,12 +54,16 @@ Jimmy Five Times (4)
 2
 1
 0
+```
 
 ### Lists
+```python
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 >>> spam
 ['cat', 'bat', 'rat', 'elephant']
+```
 ### Getting Individual Values in a List with Indexes
+```python
 >>> spam[0]
 'cat'
 >>> spam[1]
@@ -64,11 +72,15 @@ Jimmy Five Times (4)
 'elephant'
 >>> spam[-2]
 'rat'
+```
 ### Getting a List’s Length with len()
+```python
 >>> spam = ['cat', 'dog', 'moose']
 >>> len(spam)
 3
+```
 ### Changing Values in a List with Indexes
+```python
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 >>> spam[1] = 'aardvark'
 >>> spam
@@ -79,7 +91,9 @@ Jimmy Five Times (4)
 >>> spam[-1] = 12345
 >>> spam
 ['cat', 'aardvark', 'aardvark', 12345]
+```
 ### Getting Sublists with Slices
+```python
 >>> spam[0:4]
 ['cat', 'bat', 'rat', 'elephant']
 >>> spam[1:3]
@@ -90,7 +104,9 @@ Jimmy Five Times (4)
 ['cat', 'bat']
 >>> spam[1:]
 ['bat', 'rat', 'elephant']
+```
 ### Slicing the complete list will perform a copy:
+```python
 >>> spam2 = spam[:]
 ['cat', 'bat', 'rat', 'elephant']
 >>> spam.append('dog')
@@ -98,8 +114,10 @@ Jimmy Five Times (4)
 ['cat', 'bat', 'rat', 'elephant', 'dog']
 >>> spam2
 ['cat', 'bat', 'rat', 'elephant']
+```
 
 ### List Concatenation and List Replication
+```python
 >>> [1, 2, 3] + ['A', 'B', 'C']
 [1, 2, 3, 'A', 'B', 'C']
 >>> ['X', 'Y', 'Z'] * 3
@@ -108,7 +126,9 @@ Jimmy Five Times (4)
 >>> spam = spam + ['A', 'B', 'C']
 >>> spam
 [1, 2, 3, 'A', 'B', 'C']
+```
 ### Removing Values from Lists with del Statements
+```python
 >>> spam = ['cat', 'bat', 'rat', 'elephant']
 >>> del spam[2]
 >>> spam
@@ -116,8 +136,10 @@ Jimmy Five Times (4)
 >>> del spam[2]
 >>> spam
 ['cat', 'bat']
+```
 
 ### Using for Loops with Lists
+```python
 >>> supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
 >>> for i, supply in enumerate(supplies):
 >>>     print('Index {} in supplies is: {}'.format(str(i), supply))
@@ -125,7 +147,9 @@ Index 0 in supplies is: pens
 Index 1 in supplies is: staplers
 Index 2 in supplies is: flame-throwers
 Index 3 in supplies is: binders
+```
 ### Looping Through Multiple Lists with zip()
+```python
 >>> name = ['Pete', 'John', 'Elizabeth']
 >>> age = [6, 23, 44]
 >>> for n, a in zip(name, age):
@@ -133,15 +157,19 @@ Index 3 in supplies is: binders
 Pete is 6 years old
 John is 23 years old
 Elizabeth is 44 years old
+```
 
 ### Keyword Arguments and print()
+```python
 >>> print('cats', 'dogs', 'mice')
 cats dogs mice
 >>> print('cats', 'dogs', 'mice', sep=',')
 cats,dogs,mice
+```
 
 ### The global Statement
-### If you need to modify a global variable from within a function, use the global statement:
+If you need to modify a global variable from within a function, use the global statement:
+```python
 >>> def spam():
 >>>     global eggs
 >>>     eggs = 'spam'
@@ -150,9 +178,11 @@ cats,dogs,mice
 >>> spam()
 >>> print(eggs)
 spam
+```
 
 ### Final code in exception handling
-### Code inside the finally section is always executed.
+Code inside the finally section is always executed.
+```python
 >>> def spam(divideBy):
 >>>     try:
 >>>         return 42 / divideBy
@@ -173,10 +203,12 @@ None
 >>> print(spam(1))
 -- division finished --
 42.0
+```
 
 
 # OOP - Inheritance
-# Simulation OOP
+### Simulation OOP
+```python
 class Toy:
     def talk(self):
         raise NotImplementedError('This method should have implemented.')
@@ -202,7 +234,7 @@ class ToyFactory:
             return Cat()
         else:
             return None
-
+```
 
 ### References:
 - [Python Cheatsheet!](https://www.pythoncheatsheet.org/)
