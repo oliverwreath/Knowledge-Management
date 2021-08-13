@@ -8,6 +8,7 @@
 - 16大常见系统设计
   - [必看SDP](https://github.com/donnemartin/system-design-primer)
   - 延伸阅读Big Tech Blogs
+    - [InfoQ Architecture](https://www.infoq.com/microservices/)
     - [The Airbnb Tech Blog](https://medium.com/airbnb-engineering)
     - [Uber Engineering](https://eng.uber.com/)
     - [Netflix Tech Blog](http://techblog.netflix.com/)
