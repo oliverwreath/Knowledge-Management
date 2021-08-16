@@ -1,7 +1,7 @@
 # Knowledge-Management
 - Mission Statement: 
   - Little Strokes fell great oaks. 
-- 算法贵精不贵多
+- Coding算法贵精不贵多
   - 模板死记，切记是为了活用。
   - Java Cheat-Sheet.java 
   - Python Cheat-Sheet.py 
